@@ -62,3 +62,11 @@ class Rectangle:
         if self.__y1 < self.__y2:
             return self.__y1
         return self.__y2
+
+def main():
+
+    unit_1 = Unit("Black Dragon", 3, 2)
+    dragon_1 = Dragon(Unit, 2, 1, 2, 1,2)
+    print(f"Is {unit_1.name} in hit box =  {dragon_1.in_area(2, 1, 3, 2)}")
+
+main()
