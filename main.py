@@ -42,7 +42,7 @@ class Rectangle:
         self.__y1 = y1
         self.__x2 = x2
         self.__y2 = y2
-
+        
     def get_left_x(self):
         if self.__x1 < self.__x2:
             return self.__x1
@@ -64,12 +64,14 @@ class Rectangle:
         return self.__y2
 
 def main():
-
+    
     unit_1 = Unit("Black Dragon", 3, 2)
     dragon_1 = Dragon(Unit, 2, 1, 2, 1,2)
     unit_2 = Unit("Gold Dragon", 2, 1)
     dragon_2 = Dragon(Unit, 3, 2, 1, 2,3)
+    dragon_3 = Dragon(Unit, 4, 3, 1, 3,2)
     print(f"Is {unit_1.name} in hit box =  {dragon_1.in_area(2, 1, 3, 2)}")
     print(f"Is {unit_2.name} in hit box =  {dragon_2.in_area(1, 2, 1, 3)}")
+    print(f"Is {unit_1.name} in hit box =  {dragon_3.in_area(2, 3, 2, 1)}")
 
 main()
